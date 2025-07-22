@@ -1,0 +1,44 @@
+:root {
+  --negro: #000000;
+  --verde-claro: #CFFFE2;
+  --verde-gris: #A2D5C6;
+  --blanco-gris: #F6F6F6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--blanco-gris);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: var(--verde-gris);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: var(--negro);
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+#clock {
+  font-size: 3em;
+  color: var(--verde-claro);
+  background-color: var(--negro);
+  padding: 20px 40px;
+  border-radius: 15px;
+  letter-spacing: 2px;
+}
