@@ -18,6 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 20px;
 }
 
 .container {
@@ -25,7 +26,8 @@ body {
   background-color: var(--verde-gris);
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
@@ -41,4 +43,54 @@ h1 {
   padding: 20px 40px;
   border-radius: 15px;
   letter-spacing: 2px;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+#fecha {
+  font-size: 1.2em;
+  color: var(--negro);
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: var(--verde-claro);
+  color: var(--negro);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--blanco-gris);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  #clock {
+    font-size: 2em;
+    padding: 15px 30px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #fecha {
+    font-size: 1em;
+  }
 }
