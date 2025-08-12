@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Generador de contraseñas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="application" aria-label="Generador de contraseñas">
+      <header>
+        <div class="logo">PW</div>
+        <div>
+          <h1>Generador de contraseñas</h1>
+          <p class="lead">Genere contraseñas seguras y personalizables.</p>
+        </div>
+      </header>
+
+      <div class="controls">
+        <div class="panel">
+          <label for="length">Longitud: <span id="lengthVal">16</span></label>
+          <div class="row">
+            <input id="length" type="range" min="4" max="64" value="16" />
+            <input id="lengthNumber" type="number" min="4" max="64" value="16" aria-label="Longitud numérica" />
+          </div>
+
+          <div class="options">
+            <label class="option"><input id="lower" type="checkbox" checked /> letras minúsculas (a-z)</label>
+            <label class="option"><input id="upper" type="checkbox" checked /> letras mayúsculas (A-Z)</label>
+            <label class="option"><input id="numbers" type="checkbox" checked /> números (0-9)</label>
+            <label class="option"><input id="symbols" type="checkbox" checked /> símbolos (!@#...)</label>
+            <label class="option"><input id="avoidSimilar" type="checkbox" /> evitar caracteres similares</label>
+          </div>
+
+          <div class="row">
+            <button id="generate">Generar</button>
+            <button id="generatePronounce" class="ghost">Pronunciable</button>
+          </div>
+
+          <div class="strength">
+            <div class="meter"><i id="meterFill"></i></div>
+            <div class="meta"><span id="strengthText">—</span> · <span id="entropy">0 bits</span></div>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <label for="password">Contraseña generada</label>
+          <div class="output">
+            <input id="password" type="text" readonly />
+            <button id="copy">Copiar</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
