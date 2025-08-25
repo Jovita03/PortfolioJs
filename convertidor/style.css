@@ -1,0 +1,67 @@
+:root {
+  --negro: #000000;
+  --verde-claro: #CFFFE2;
+  --verde-gris: #A2D5C6;
+  --blanco-gris: #F6F6F6;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--negro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.contenedor {
+  background: var(--verde-claro);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 320px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--negro);
+  margin-bottom: 1.5rem;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 2px solid var(--verde-gris);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--negro);
+}
+
+button {
+  background-color: var(--verde-gris);
+  color: var(--negro);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--negro);
+  color: var(--blanco-gris);
+}
+
+.resultado {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--blanco-gris);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--negro);
+}
